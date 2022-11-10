@@ -6,7 +6,6 @@ class chunk{
         this.direction=direction
         this.previousDirection=previousDirection
         this.fade=1
-        this.time=0
         this.remove=false
     }
     display(){
@@ -79,8 +78,5 @@ class chunk{
         this.layer.ellipse(0,0,16,16)
         this.layer.rotate(-this.direction)
         this.layer.translate(-this.position.x,-this.position.y)
-    }
-    update(){
-        this.time++
     }
 }

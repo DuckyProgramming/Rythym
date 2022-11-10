@@ -9,6 +9,7 @@ function draw(){
             graphics.main.scale(stage.focus.size)
             graphics.main.translate(graphics.main.width/2,graphics.main.height/2)
             graphics.main.background(10,15,20)
+            graphics.main.image(graphics.map,-300,-300)
             for(a=0,la=run.fore.length;a<la;a++){
                 for(b=0,lb=run.fore[a].length;b<lb;b++){
                     run.fore[a][b].display()

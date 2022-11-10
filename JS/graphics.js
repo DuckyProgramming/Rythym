@@ -6,4 +6,6 @@ function setupGraphics(){
     strokeJoin(ROUND)
     graphics.main=createGraphics(900,600)
     setupLayer(graphics.main)
+    graphics.map=createGraphics(10000,10000)
+    setupLayer(graphics.map)
 }

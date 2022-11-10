@@ -1,15 +1,22 @@
 maps=[
     {
-        chunks:'0600644444321012341411',
+        chunks:'2222222222',
+    },{
+        chunks:'2221642221642222164222216422221642222164222216422221642'+
+        '1216421216421216421216421216421220642220642222206422206422221642'+
+        '2222064222064207776428666554206554206554206554206554206554206554'+
+        '2065542221754221754221754221754221754221754222222022221642221642'+
+        '2216422222161616166433320642211064211064211064211064211064211064'+
+        '211064211064211066',
     },
 ]
 generation={position:{x:0,y:0}}
 stage={scale:0,focus:{x:0,y:0,size:1},scene:'level'}
-gameplay={range:30,speed:3}
-graphics={main:0}
+gameplay={range:45,speed:4}
+graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
 entities={chunks:[],players:[]}
 inputs={mouse:{x:0,y:0},rel:{x:0,y:0}}
-run={fore:[]}
+run={back:[],fore:[]}
 a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=0;i=0;j=0;k=0;l=0;m=0;n=0;o=0;p=0
 la=0;lb=0;lc=0;ld=0;le=0;lf=0;lg=0;lh=0;li=0;lj=0;lk=0;ll=0;lm=0;ln=0;lo=0;lp=0

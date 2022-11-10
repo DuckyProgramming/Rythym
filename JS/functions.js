@@ -29,10 +29,21 @@ function updateMouse(layer){
 	inputs.rel.x=(inputs.mouse.x-width/2)/stage.scale+layer.width/2
 	inputs.rel.y=(inputs.mouse.y-height/2)/stage.scale+layer.height/2
 }
-function generateChunks(layer,chunks){
+function displayMap(layer){
+    layer.push()
+    layer.translate(300,300)
+    for(a=0,la=run.map.length;a<la;a++){
+        for(b=0,lb=run.map[a].length;b<lb;b++){
+            run.map[a][b].display()
+        }
+    }
+    layer.translate(-300,-300)
+    layer.pop()
+}
+function generateChunks(layer,layer2,chunks){
     entities.players.push(new player(layer,0,0))
     for(let i=0,li=chunks.length;i<li;i++){
-        entities.chunks.push(new chunk(layer,generation.position.x,generation.position.y,0,int(chunks[i])*45,int(chunks[max(i-1,0)])*45))
+        entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,0,int(chunks[i])*45,int(chunks[max(i-1,0)])*45))
         generation.position.x+=sin(int(chunks[i])*45)*90
         generation.position.y-=cos(int(chunks[i])*45)*90
     }
