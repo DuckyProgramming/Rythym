@@ -57,7 +57,7 @@ maps=[
         chunks:'22222222466666642222222246424642464'+
         '22224642464246422220242024202420242022224642'+
         '2224642202246422022466',
-        name:'3-X',speed:5
+        name:'3-X',speed:4
     },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
@@ -69,7 +69,7 @@ maps=[
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:0,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:18,scene:'level'}
 gameplay={range:45,speed:4}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}

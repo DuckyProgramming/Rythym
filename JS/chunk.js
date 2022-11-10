@@ -80,7 +80,7 @@ class chunk{
             this.layer.fill(0,0,255,this.fade)
             this.layer.quad(-10,-10,3,-3,10,10,-3,3)
             this.layer.quad(-3,-3,10,-10,3,3,-10,10)
-        }else if(this.type==1){
+        }else if(this.type==2){
             this.layer.fill(255,0,0,this.fade)
             this.layer.rotate(45)
             this.layer.quad(-10,-10,3,-3,10,10,-3,3)

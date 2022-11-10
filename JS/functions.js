@@ -42,7 +42,7 @@ function displayMap(layer){
     layer.pop()
 }
 function generateChunks(layer,layer2,chunks){
-	gameplay.speed=maps[stage.map].speed
+	gameplay.speed=maps[stage.map].speed*1.5
     entities.players.push(new player(layer,0,0))
 	generation.lastDirection=int(chunks[0])*45
     for(let i=0,li=chunks.length;i<li;i++){
