@@ -45,6 +45,22 @@ class player{
             stage.focus.x+=sin(this.moveDirection)*25
             stage.focus.y+=cos(this.moveDirection)*25
         }
+        if(this.position.x>500+stage.cube.x*1000){
+            stage.cube.x+=0.2
+            displayMap(graphics.map)
+        }
+        if(this.position.x<-500+stage.cube.x*1000){
+            stage.cube.x-=0.2
+            displayMap(graphics.map)
+        }
+        if(this.position.y>500+stage.cube.y*1000){
+            stage.cube.y+=0.2
+            displayMap(graphics.map)
+        }
+        if(this.position.y<-500+stage.cube.y*1000){
+            stage.cube.y-=0.2
+            displayMap(graphics.map)
+        }
     }
     move(){
         if(this.chunk<entities.chunks.length-1&&abs(this.direction-entities.chunks[this.chunk].direction)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction-360)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction+360)<gameplay.range){

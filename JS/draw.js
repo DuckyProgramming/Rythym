@@ -4,12 +4,11 @@ function draw(){
     switch(stage.scene){
         case 'level':
             graphics.main.push()
-            graphics.main.push()
             graphics.main.translate(-stage.focus.x,-stage.focus.y)
             graphics.main.scale(stage.focus.size)
             graphics.main.translate(graphics.main.width/2,graphics.main.height/2)
             graphics.main.background(10,15,20)
-            graphics.main.image(graphics.map,-300,-300)
+            graphics.main.image(graphics.map,-1000+stage.cube.x*1000,-1000+stage.cube.y*1000)
             for(a=0,la=run.fore.length;a<la;a++){
                 for(b=0,lb=run.fore[a].length;b<lb;b++){
                     run.fore[a][b].display()

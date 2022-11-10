@@ -30,14 +30,15 @@ function updateMouse(layer){
 	inputs.rel.y=(inputs.mouse.y-height/2)/stage.scale+layer.height/2
 }
 function displayMap(layer){
+    layer.clear()
     layer.push()
-    layer.translate(300,300)
-    for(a=0,la=run.map.length;a<la;a++){
-        for(b=0,lb=run.map[a].length;b<lb;b++){
-            run.map[a][b].display()
+    layer.translate(1000-stage.cube.x*1000,1000-stage.cube.y*1000)
+    for(i=0,li=run.map.length;i<li;i++){
+        for(j=0,lj=run.map[i].length;j<lj;j++){
+            run.map[i][j].display()
         }
     }
-    layer.translate(-300,-300)
+    layer.translate(-1000+stage.cube.x*1000,-1000+stage.cube.y*1000)
     layer.pop()
 }
 function generateChunks(layer,layer2,chunks){
