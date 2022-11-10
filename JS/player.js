@@ -9,6 +9,9 @@ class player{
         this.time=0
         this.moveDirection=0
         this.remove=false
+        this.nextTimer=-1
+        this.failSpin=0
+        this.fail=[]
     }
     display(){
         this.layer.noFill()
@@ -16,8 +19,12 @@ class player{
         this.layer.strokeWeight(3)
         this.layer.ellipse(this.ring.x,this.ring.y,180,180)
         this.layer.translate(this.position.x,this.position.y)
-        this.layer.rotate(this.direction)
+        this.layer.fill(200,0,0)
         this.layer.noStroke()
+        for(g=0,lg=this.fail.length;g<lg;g++){
+            this.layer.ellipse(sin(this.fail[g])*90,-cos(this.fail[g])*90,10,10)
+        }
+        this.layer.rotate(this.direction)
         this.layer.fill(150,255,150,this.fade)
         this.layer.ellipse(0,0,24,24)
         this.layer.ellipse(0,-90,24,24)
@@ -26,6 +33,7 @@ class player{
     }
     update(){
         this.direction+=gameplay.speed
+        this.failSpin+=gameplay.speed
         if(this.direction>360){
             this.direction-=360
         }
@@ -61,13 +69,40 @@ class player{
             stage.cube.y-=0.2
             displayMap(graphics.map)
         }
+        if(this.nextTimer>0){
+            this.nextTimer--
+            this.failSpin=0
+        }else if(this.nextTimer==0||this.failSpin>360){
+            if(this.nextTimer==0){
+                stage.map++
+            }
+            this.nextTimer=-1
+            this.fail=[]
+            resetWorld()
+        }
+        //this.move()
     }
     move(){
-        if(this.chunk<entities.chunks.length-1&&abs(this.direction-entities.chunks[this.chunk].direction)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction-360)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction+360)<gameplay.range){
+        if((this.chunk<entities.chunks.length-1&&abs(this.direction-entities.chunks[this.chunk].direction)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction-360)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction+360)<gameplay.range)&&this.fail.length<2){
             this.direction=entities.chunks[this.chunk].direction+180
             this.chunk++
             this.position.x=entities.chunks[this.chunk].position.x
             this.position.y=entities.chunks[this.chunk].position.y
+            this.failSpin=0
+            this.fail=[]
+            switch(entities.chunks[this.chunk].type){
+                case 1:
+                    gameplay.speed/=2
+                break
+                case 2:
+                    gameplay.speed*=2
+                break
+            }
+            if(this.chunk==entities.chunks.length-1){
+                this.nextTimer=120
+            }
+        }else{
+            this.fail.push(this.direction)
         }
     }
 }

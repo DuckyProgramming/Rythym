@@ -42,10 +42,31 @@ function displayMap(layer){
     layer.pop()
 }
 function generateChunks(layer,layer2,chunks){
+	gameplay.speed=maps[stage.map].speed
     entities.players.push(new player(layer,0,0))
+	generation.lastDirection=int(chunks[0])*45
     for(let i=0,li=chunks.length;i<li;i++){
-        entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,0,int(chunks[i])*45,int(chunks[max(i-1,0)])*45))
-        generation.position.x+=sin(int(chunks[i])*45)*90
-        generation.position.y-=cos(int(chunks[i])*45)*90
+		if(chunks[i]=='a'){
+			generation.type=1
+		}else if(chunks[i]=='b'){
+			generation.type=2
+		}else{
+        	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,int(chunks[i])*45,generation.lastDirection))
+        	generation.position.x+=sin(int(chunks[i])*45)*90
+        	generation.position.y-=cos(int(chunks[i])*45)*90
+			generation.lastDirection=int(chunks[i])*45
+			generation.type=0
+		}
     }
+}
+function resetWorld(){
+	entities.chunks=[]
+	entities.players=[]
+	generation={position:{x:0,y:0},type:0}
+	stage.focus.x=0
+	stage.focus.y=0
+	gameplay.speed=5
+	generateChunks(graphics.main,graphics.map,maps[stage.map].chunks)
+    run={map:[entities.chunks],fore:[entities.players]}
+    displayMap(graphics.map)
 }

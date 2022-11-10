@@ -22,6 +22,10 @@ function draw(){
             graphics.main.scale(1/stage.focus.size)
             graphics.main.translate(stage.focus.x,stage.focus.y)
             graphics.main.pop()
+            graphics.main.noStroke()
+            graphics.main.fill(255)
+            graphics.main.textSize(25)
+            graphics.main.text(maps[stage.map].name,450,50)
         break
     }
     stage.scale=min(width/graphics.main.width,height/graphics.main.height)
