@@ -14,14 +14,32 @@ class chunk{
         this.layer.strokeWeight(3)
         this.layer.stroke(100,180,200,this.fade)
         this.layer.fill(80,140,160,this.fade)
-        if(this.previousDirection==this.direction+330||this.previousDirection==this.direction-30){
+        if(this.previousDirection==this.direction+300||this.previousDirection==this.direction-60){
+            this.layer.beginShape()
+            this.layer.vertex(-15,-45)
+            this.layer.vertex(15,-45)
+            this.layer.vertex(-sin(60)*-18,cos(60)*-18)
+            this.layer.vertex(-cos(120)*15-sin(120)*-45,cos(120)*-45-sin(120)*15)
+            this.layer.vertex(-cos(120)*-15-sin(120)*-45,cos(120)*-45-sin(120)*-15)
+            this.layer.vertex(-sin(60)*18,cos(60)*18)
+            this.layer.endShape(CLOSE)
+        }else if(this.previousDirection==this.direction+60||this.previousDirection==this.direction-300){
+            this.layer.beginShape()
+            this.layer.vertex(15,-45)
+            this.layer.vertex(-15,-45)
+            this.layer.vertex(sin(60)*-18,cos(60)*-18)
+            this.layer.vertex(cos(120)*15+sin(120)*-45,cos(120)*-45-sin(120)*15)
+            this.layer.vertex(cos(120)*-15+sin(120)*-45,cos(120)*-45-sin(120)*-15)
+            this.layer.vertex(sin(60)*18,cos(60)*18)
+            this.layer.endShape(CLOSE)
+        }else if(this.previousDirection==this.direction+330||this.previousDirection==this.direction-30){
             this.layer.beginShape()
             this.layer.vertex(-15,-45)
             this.layer.vertex(15,-45)
             this.layer.vertex(-sin(75)*-16,cos(75)*-16)
             this.layer.vertex(-cos(150)*15-sin(150)*-45,cos(150)*-45-sin(150)*15)
             this.layer.vertex(-cos(150)*-15-sin(150)*-45,cos(150)*-45-sin(150)*-15)
-            this.layer.vertex(-sin(75)*15,cos(75)*15)
+            this.layer.vertex(-sin(75)*16,cos(75)*16)
             this.layer.endShape(CLOSE)
         }else if(this.previousDirection==this.direction+240||this.previousDirection==this.direction-120){
             this.layer.beginShape()
@@ -39,7 +57,7 @@ class chunk{
             this.layer.vertex(sin(75)*-16,cos(75)*-16)
             this.layer.vertex(cos(150)*15+sin(150)*-45,cos(150)*-45-sin(150)*15)
             this.layer.vertex(cos(150)*-15+sin(150)*-45,cos(150)*-45-sin(150)*-15)
-            this.layer.vertex(sin(75)*15,cos(75)*15)
+            this.layer.vertex(sin(75)*16,cos(75)*16)
             this.layer.endShape(CLOSE)
         }else if(this.previousDirection==this.direction+120||this.previousDirection==this.direction-240){
             this.layer.beginShape()
