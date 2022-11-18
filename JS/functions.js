@@ -51,6 +51,8 @@ function generateChunks(layer,layer2,chunks){
 			generation.type=2
 		}else if(chunks[i]=='c'){
 			generation.type=3
+		}else if(chunks[i]=='d'){
+			generation.type=4
 		}else{
         	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,int(chunks[i])*45,generation.lastDirection))
         	generation.position.x+=sin(int(chunks[i])*45)*90
@@ -76,6 +78,7 @@ function resetWorld(){
 	entities.players[0].direction=entities.chunks[gameplay.check].direction+180
 	entities.players[0].chunk=gameplay.check
 	gameplay.speed=gameplay.checkSpeed
+	gameplay.direction=gameplay.checkDirection
     run={map:[entities.chunks],fore:[entities.players]}
     displayMap(graphics.map)
 }

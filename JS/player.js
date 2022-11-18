@@ -32,10 +32,13 @@ class player{
         this.layer.translate(-this.position.x,-this.position.y)
     }
     update(){
-        this.direction+=gameplay.speed
+        this.direction+=gameplay.speed*gameplay.direction
         this.failSpin+=gameplay.speed
         if(this.direction>360){
             this.direction-=360
+        }
+        if(this.direction<0){
+            this.direction+=360
         }
         if(dist(this.ring.x,this.ring.y,this.position.x,this.position.y)<25){
             this.ring.x=this.position.x
@@ -78,6 +81,7 @@ class player{
                 gameplay.check=0
                 gameplay.speed=maps[stage.map].speed*2
                 gameplay.checkSpeed=maps[stage.map].speed*2
+                gameplay.direction=1
             }
             this.nextTimer=-1
             this.fail=[]
@@ -103,6 +107,10 @@ class player{
                 case 3:
                     gameplay.check=this.chunk
                     gameplay.checkSpeed=gameplay.speed
+                    gameplay.checkDirection=gameplay.direction
+                break
+                case 4:
+                    gameplay.direction*=-1
                 break
             }
             if(this.chunk==entities.chunks.length-1){

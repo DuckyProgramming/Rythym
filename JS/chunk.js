@@ -89,6 +89,10 @@ class chunk{
         }else if(this.type==3){
             this.layer.fill(255,this.fade)
             this.layer.ellipse(0,0,20,20)
+        }else if(this.type==4){
+            this.layer.stroke(100,255,100,this.fade)
+            this.layer.strokeWeight(6)
+            this.layer.ellipse(0,0,20,20)
         }
         this.layer.rotate(-this.direction)
         this.layer.translate(-this.position.x,-this.position.y)

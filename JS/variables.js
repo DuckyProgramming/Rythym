@@ -59,6 +59,12 @@ maps=[
         '2224642202246422022466',
         name:'3-X',speed:4
     },{
+        chunks:'22221222122212222',
+        name:'4-1',speed:3,
+    },{
+        chunks:'22106d66702d22106d6670222',
+        name:'4-2',speed:3,
+    },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
         '22220642220642077764286666554206554206554206554'+
@@ -69,8 +75,8 @@ maps=[
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:17,scene:'level'}
-gameplay={range:45,speed:4,check:0,checkSpeed:0}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:19,scene:'level'}
+gameplay={range:45,speed:4,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
 entities={chunks:[],players:[]}
