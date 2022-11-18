@@ -42,7 +42,6 @@ function displayMap(layer){
     layer.pop()
 }
 function generateChunks(layer,layer2,chunks){
-	gameplay.speed=maps[stage.map].speed*1.5
     entities.players.push(new player(layer,0,0))
 	generation.lastDirection=int(chunks[0])*45
     for(let i=0,li=chunks.length;i<li;i++){
@@ -50,6 +49,8 @@ function generateChunks(layer,layer2,chunks){
 			generation.type=1
 		}else if(chunks[i]=='b'){
 			generation.type=2
+		}else if(chunks[i]=='c'){
+			generation.type=3
 		}else{
         	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,int(chunks[i])*45,generation.lastDirection))
         	generation.position.x+=sin(int(chunks[i])*45)*90
@@ -65,8 +66,16 @@ function resetWorld(){
 	generation={position:{x:0,y:0},type:0}
 	stage.focus.x=0
 	stage.focus.y=0
-	gameplay.speed=5
 	generateChunks(graphics.main,graphics.map,maps[stage.map].chunks)
+	entities.players[0].position.x=entities.chunks[gameplay.check].position.x
+	entities.players[0].position.y=entities.chunks[gameplay.check].position.y
+	entities.players[0].ring.x=entities.chunks[gameplay.check].position.x
+	entities.players[0].ring.y=entities.chunks[gameplay.check].position.y
+	stage.focus.x=entities.chunks[gameplay.check].position.x
+	stage.focus.y=entities.chunks[gameplay.check].position.y
+	entities.players[0].direction=entities.chunks[gameplay.check].direction+180
+	entities.players[0].chunk=gameplay.check
+	gameplay.speed=gameplay.checkSpeed
     run={map:[entities.chunks],fore:[entities.players]}
     displayMap(graphics.map)
 }

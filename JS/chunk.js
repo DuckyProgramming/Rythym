@@ -86,6 +86,9 @@ class chunk{
             this.layer.quad(-10,-10,3,-3,10,10,-3,3)
             this.layer.quad(-3,-3,10,-10,3,3,-10,10)
             this.layer.rotate(-45)
+        }else if(this.type==3){
+            this.layer.fill(255,this.fade)
+            this.layer.ellipse(0,0,20,20)
         }
         this.layer.rotate(-this.direction)
         this.layer.translate(-this.position.x,-this.position.y)

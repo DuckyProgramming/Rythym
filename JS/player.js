@@ -75,6 +75,9 @@ class player{
         }else if(this.nextTimer==0||this.failSpin>360){
             if(this.nextTimer==0){
                 stage.map++
+                gameplay.check=0
+                gameplay.speed=maps[stage.map].speed*2
+                gameplay.checkSpeed=maps[stage.map].speed*2
             }
             this.nextTimer=-1
             this.fail=[]
@@ -96,6 +99,10 @@ class player{
                 break
                 case 2:
                     gameplay.speed*=2
+                break
+                case 3:
+                    gameplay.check=this.chunk
+                    gameplay.checkSpeed=gameplay.speed
                 break
             }
             if(this.chunk==entities.chunks.length-1){
