@@ -11,6 +11,7 @@ class player{
         this.remove=false
         this.nextTimer=-1
         this.failSpin=0
+        this.swap=0
         this.fail=[]
     }
     display(){
@@ -25,8 +26,9 @@ class player{
             this.layer.ellipse(sin(this.fail[g])*90,-cos(this.fail[g])*90,10,10)
         }
         this.layer.rotate(this.direction)
-        this.layer.fill(150,255,150,this.fade)
+        this.layer.fill(255-this.swap*105,150+this.swap*105,150,this.fade)
         this.layer.ellipse(0,0,24,24)
+        this.layer.fill(150+this.swap*105,255-this.swap*105,150,this.fade)
         this.layer.ellipse(0,-90,24,24)
         this.layer.rotate(-this.direction)
         this.layer.translate(-this.position.x,-this.position.y)
@@ -79,8 +81,8 @@ class player{
             if(this.nextTimer==0){
                 stage.map++
                 gameplay.check=0
-                gameplay.speed=maps[stage.map].speed*2
-                gameplay.checkSpeed=maps[stage.map].speed*2
+                gameplay.speed=maps[stage.map].speed*1.75
+                gameplay.checkSpeed=maps[stage.map].speed*1.75
                 gameplay.direction=1
             }
             this.nextTimer=-1
@@ -93,6 +95,7 @@ class player{
         if((this.chunk<entities.chunks.length-1&&abs(this.direction-entities.chunks[this.chunk].direction)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction-360)<gameplay.range||abs(this.direction-entities.chunks[this.chunk].direction+360)<gameplay.range)&&this.fail.length<2){
             this.direction=entities.chunks[this.chunk].direction+180
             this.chunk++
+            this.swap=1-this.swap
             this.position.x=entities.chunks[this.chunk].position.x
             this.position.y=entities.chunks[this.chunk].position.y
             this.failSpin=0

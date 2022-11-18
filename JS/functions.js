@@ -53,6 +53,30 @@ function generateChunks(layer,layer2,chunks){
 			generation.type=3
 		}else if(chunks[i]=='d'){
 			generation.type=4
+		}else if(chunks[i]=='e'){
+        	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,-30,generation.lastDirection))
+        	generation.position.x+=sin(-30)*90
+        	generation.position.y-=cos(-30)*90
+			generation.lastDirection=-30
+			generation.type=0
+		}else if(chunks[i]=='f'){
+        	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,-150,generation.lastDirection))
+        	generation.position.x+=sin(-150)*90
+        	generation.position.y-=cos(-150)*90
+			generation.lastDirection=-150
+			generation.type=0
+		}else if(chunks[i]=='g'){
+        	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,30,generation.lastDirection))
+        	generation.position.x+=sin(30)*90
+        	generation.position.y-=cos(30)*90
+			generation.lastDirection=30
+			generation.type=0
+		}else if(chunks[i]=='h'){
+        	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,150,generation.lastDirection))
+        	generation.position.x+=sin(150)*90
+        	generation.position.y-=cos(150)*90
+			generation.lastDirection=150
+			generation.type=0
 		}else{
         	entities.chunks.push(new chunk(layer2,generation.position.x,generation.position.y,generation.type,int(chunks[i])*45,generation.lastDirection))
         	generation.position.x+=sin(int(chunks[i])*45)*90
