@@ -142,6 +142,48 @@ maps=[
         '60244460244666602d06d022',
         name:'7-X',speed:3.25,
     },{
+        chunks:'2ggggg222ggggg22',
+        name:'8-1',speed:2.75,
+    },{
+        chunks:'2ggggggg6f2ggggggg6f2ggggg6f2222',
+        name:'8-2',speed:2.75,
+    },{
+        chunks:'2f22f2222f22f2222f22f22222',
+        name:'8-3',speed:2.75,
+    },{
+        chunks:'22222ge6fh222222ge6d6eg2222d2ge6fh222',
+        name:'8-4',speed:2.75,
+    },{
+        chunks:'22ff22gg22ff22gg22ff22gg222',
+        name:'8-5',speed:2.75,
+    },{
+        chunks:'22fff2gg22fff2gg22fff2gg22',
+        name:'8-6',speed:2.75,
+    },{
+        chunks:'2ff22ggg6f2ggg6f2ggg6f2ggg22',
+        name:'8-7',speed:2.75,
+    },{
+        chunks:'2ggggge6fh2ggggge6fh2ggggge6fh222',
+        name:'8-8',speed:2.75,
+    },{
+        chunks:'2ggggggg6f2ggggg222ggggggg6f2gggg6f2222gggg222f22f22f2f22f22f2'+
+        'ffcfff22ffff222fffff22ffff22222222ge6666d6eg222d22ge6fh2222f22f22f2f22f2'+
+        '2f2c2ff22gg22ff22gg22ff22gg22ffff2222fff2gg22fff2gg22fff2gg22fff2gg2'+
+        '2c2ge6d6eg2d22ge6fh222f22f22f2f22f2222gggggggg6f2ggg6f2ggg6f2ggggge6fh222',
+        name:'8-X',speed:3.75,
+    },{
+        chunks:'',
+        name:'9-1',speed:2.5,
+    },{
+        chunks:'',
+        name:'9-2',speed:2.5,
+    },{
+        chunks:'',
+        name:'9-3',speed:2.5,
+    },{
+        chunks:'',
+        name:'9-4',speed:2.5,
+    },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
         '22220642220642077764286666554206554206554206554'+
@@ -152,7 +194,7 @@ maps=[
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:41,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:50,scene:'level'}
 gameplay={range:45,speed:0,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
