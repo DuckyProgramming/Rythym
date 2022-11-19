@@ -226,12 +226,39 @@ maps=[
         '2a2c2210222212121221122b222f2f221022222222gg222222gg222222gg22gg22ggg',
         name:'10-X',speed:3.5,
     },{
+        chunks:'21653221653221653222',
+        name:'11-1',speed:2.25,
+    },{
+        chunks:'2106d702d106422106d702d106422220642106d7022',
+        name:'11-2',speed:2.5,
+    },{
+        chunks:'222gege6fh222gege66666degeg2hf666egeg22d222ge6deg2dge66',
+        name:'11-3',speed:2.75,
+    },{
+        chunks:'222ge60222ge60222ge66',
+        name:'11-4',speed:2.75,
+    },{
+        chunks:'2217642217642217642222221764221764221764222222',
+        name:'11-5',speed:2.75,
+    },{
+        chunks:'220064220064220064222222006422006422006422222200642200642106d7022',
+        name:'11-6',speed:2.75,
+    },{
+        chunks:'22222222b46d66666422222246d66420666fh2a20666666'+
+        '665217652176c6b66664206542d346d542d34666660246666egeg2hf6'+
+        '66egeg2d2222gege6fh222ge60222gege6fh222gege6d66c66eg2dge6deg2d22'+
+        '22a2b2222206d6702d106d70246666660246702d1066642066d66022d2206'+
+        '6d6602222c22224602224602224602224602346d542d346d5422'+
+        '20022356022356022356022c2202244602244602244602'+
+        '224602346d542d346d54222222',
+        name:'11-X',speed:1.5,
+    },{
         chunks:'',
-        name:'11-1',speed:3,
+        name:'11-8',speed:2.75,
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:64,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:72,scene:'level'}
 gameplay={range:45,speed:0,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
