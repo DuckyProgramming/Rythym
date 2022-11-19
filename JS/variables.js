@@ -120,6 +120,28 @@ maps=[
         '64444222064444222060022',
         name:'6-X',speed:3.5,
     },{
+        chunks:'246d4222d46d4222d46d42222',
+        name:'7-1',speed:2.5,
+    },{
+        chunks:'246d4224642d4664246d4224642d466',
+        name:'7-2',speed:2.5,
+    },{
+        chunks:'222206422224602222064222246022222',
+        name:'7-3',speed:2.5,
+    },{
+        chunks:'22064222000642000666420666444206444',
+        name:'7-4',speed:2.5,
+    },{
+        chunks:'222064200006420666642064444',
+        name:'7-5',speed:2.5,
+    },{
+        chunks:'246d4222d46d4222d46d4224642d4646666'+
+        '66602466660246666420666642066664442222a2a2b2b22'+
+        '22c246d42222d46d4224602222460244'+
+        '44664246d4224642d4664246d4224642d466'+
+        '60244460244666602d06d022',
+        name:'7-X',speed:3.25,
+    },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
         '22220642220642077764286666554206554206554206554'+
@@ -130,8 +152,8 @@ maps=[
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:34,scene:'level'}
-gameplay={range:45,speed:4,direction:1,check:0,checkSpeed:0,checkDirection:1}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:41,scene:'level'}
+gameplay={range:45,speed:0,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
 entities={chunks:[],players:[]}
