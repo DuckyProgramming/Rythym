@@ -172,29 +172,47 @@ maps=[
         '2c2ge6d6eg2d22ge6fh222f22f22f2f22f2222gggggggg6f2ggg6f2ggg6f2ggggge6fh222',
         name:'8-X',speed:3.75,
     },{
-        chunks:'',
+        chunks:'2221642221642121642122',
         name:'9-1',speed:2.5,
     },{
-        chunks:'',
+        chunks:'22206420777666420643322',
         name:'9-2',speed:2.5,
     },{
-        chunks:'',
+        chunks:'211064211064211064211066',
         name:'9-3',speed:2.5,
     },{
-        chunks:'',
+        chunks:'221754221754221754221754222',
         name:'9-4',speed:2.5,
+    },{
+        chunks:'216161616616161616666',
+        name:'9-5',speed:2.5,
     },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
-        '22220642220642077764286666554206554206554206554'+
-        '20655422217542217542217542222022221642221642'+
+        '22c220642220642077764286666554206554206554206554206554'+
+        '20655422217542217542217542222022c221642221642'+
         '2216422222161616166433321064211064'+
-        '211064211064211066',
+        '211064211064211064211066',
         name:'9-X',speed:3,
+    },{
+        chunks:'222gg6d666666ee2d221022gg666666',
+        name:'10-1',speed:3,
+    },{
+        chunks:'222gg666f2g66d66e666666ee222h6e22d2g22222',
+        name:'10-2',speed:3,
+    },{
+        chunks:'',
+        name:'10-3',speed:3,
+    },{
+        chunks:'',
+        name:'10-4',speed:3,
+    },{
+        chunks:'',
+        name:'10-5',speed:3,
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:50,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:58,scene:'level'}
 gameplay={range:45,speed:0,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
