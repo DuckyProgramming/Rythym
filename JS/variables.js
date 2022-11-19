@@ -101,6 +101,25 @@ maps=[
         '',
         name:'5-X',speed:3,
     },{
+        chunks:'222064442220644422',
+        name:'6-1',speed:3,
+    },{
+        chunks:'222060006664244666',
+        name:'6-2',speed:3,
+    },{
+        chunks:'22206002220600222060022',
+        name:'6-3',speed:3,
+    },{
+        chunks:'242024202420206002420242024202060022',
+        name:'6-4',speed:3,
+    },{
+        chunks:'222222222220642222006002220600222060'+
+        '00666424466642446664244660606060606066424644666424'+
+        '4c64424444444222222222002200642200220064220022'+
+        '202220222022200222420242020600222206002220'+
+        '64444222064444222060022',
+        name:'6-X',speed:3.5,
+    },{
         chunks:'22221642222164222216422221642'+
         '1216421216421220642220642221642'+
         '22220642220642077764286666554206554206554206554'+
@@ -111,7 +130,7 @@ maps=[
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:30,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:34,scene:'level'}
 gameplay={range:45,speed:4,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}

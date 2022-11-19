@@ -47,16 +47,15 @@ class player{
             this.ring.y=this.position.y
         }else{
             this.moveDirection=atan2(this.position.x-this.ring.x,this.position.y-this.ring.y)
-            this.ring.x+=sin(this.moveDirection)*25
-            this.ring.y+=cos(this.moveDirection)*25
+            this.ring.x+=sin(this.moveDirection)*10
+            this.ring.y+=cos(this.moveDirection)*10
         }
-        if(dist(stage.focus.x,stage.focus.y,this.ring.x,this.ring.y)<25){
+        if(dist(stage.focus.x,stage.focus.y,this.ring.x,this.ring.y)<2){
             stage.focus.x=this.ring.x
             stage.focus.y=this.ring.y
         }else{
-            this.moveDirection=atan2(this.ring.x-stage.focus.x,this.ring.y-stage.focus.y)
-            stage.focus.x+=sin(this.moveDirection)*25
-            stage.focus.y+=cos(this.moveDirection)*25
+            stage.focus.x=stage.focus.x*0.96+this.ring.x*0.04
+            stage.focus.y=stage.focus.y*0.96+this.ring.y*0.04
         }
         if(this.position.x>500+stage.cube.x*1000){
             stage.cube.x+=0.2
