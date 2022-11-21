@@ -83,6 +83,7 @@ class player{
                 gameplay.speed=maps[stage.map].speed*1.75
                 gameplay.checkSpeed=maps[stage.map].speed*1.75
                 gameplay.direction=1
+                gameplay.checkDirection=1
             }
             this.nextTimer=-1
             this.fail=[]
