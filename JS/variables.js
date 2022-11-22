@@ -277,10 +277,22 @@ maps=[
         '6416422422052205222121065424242106542c22121052421052121052105210524210052205221210'+
         '052205221060206641606020664160602210606021066',
         name:'12-X',speed:4,
+    },{
+        chunks:'22222222b22222222a2222',
+        name:'B-1',speed:3,
+    },{
+        chunks:'2222242222242222242222242222202202202202200644'+
+        '42c22b2222222222066666666022222222222200642222c2246422'+
+        '2464222464222464222006422220022220022220022c220006422200'+
+        '06422242424222222224222222c2242242242242242242242242c20020020020020020020020022',
+        name:'B-X',speed:2.75,
+    },{
+        chunks:'',
+        name:'B-1',speed:3,
     },
 ]
 generation={position:{x:0,y:0},type:0,lastDirection:0}
-stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:0,scene:'level'}
+stage={scale:0,focus:{x:0,y:0,size:1},cube:{x:0,y:0},map:80,scene:'level'}
 gameplay={range:45,speed:0,direction:1,check:0,checkSpeed:0,checkDirection:1}
 graphics={main:0,map:0}
 transition={trigger:false,anim:0,scene:stage.scene}
